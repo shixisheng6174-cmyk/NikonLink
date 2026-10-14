@@ -1,0 +1,18 @@
+<resources>
+    <style name="NikonNavIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">#303923</item>
+    </style>
+    <style name="Theme.NikonLink" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/nl_accent</item>
+        <item name="colorOnPrimary">#161C0A</item>
+        <item name="colorSecondary">@color/nl_accent</item>
+        <item name="colorSurface">@color/nl_surface</item>
+        <item name="android:colorBackground">@color/nl_bg</item>
+        <item name="android:statusBarColor">@color/nl_bg</item>
+        <item name="android:navigationBarColor">@color/nl_bg</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+</resources>
