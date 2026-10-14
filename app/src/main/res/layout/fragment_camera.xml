@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/nl_bg">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="72dp" android:gravity="center_vertical" android:paddingHorizontal="24dp">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="NikonLink" android:textSize="25sp" android:textStyle="bold" android:letterSpacing="-0.03" android:textColor="@color/nl_text"/>
+        <TextView android:id="@+id/tvConnectionStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/nl_field" android:paddingHorizontal="14dp" android:paddingVertical="8dp" android:text="未连接" android:textSize="12sp" android:textColor="@color/nl_muted"/>
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingHorizontal="24dp" android:paddingBottom="24dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="你的相机，随时在手。" android:textSize="27sp" android:textStyle="bold" android:textColor="@color/nl_text" android:layout_marginTop="14dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="无线浏览 · 原片传输 · 遥控取景" android:textSize="13sp" android:textColor="@color/nl_muted" android:layout_marginTop="10dp" android:layout_marginBottom="24dp"/>
+            <LinearLayout android:id="@+id/statusCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp" android:background="@drawable/nl_card">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="NIKON  /  WI-FI" android:textColor="@color/nl_accent" android:textSize="11sp" android:letterSpacing="0.16"/>
+                <ImageView android:layout_width="match_parent" android:layout_height="156dp" android:src="@drawable/nl_camera" android:contentDescription="尼康相机" android:layout_marginTop="8dp"/>
+                <TextView android:id="@+id/tvStatusTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="连接你的相机" android:textSize="23sp" android:textStyle="bold" android:textColor="@color/nl_text" android:layout_marginTop="10dp"/>
+                <TextView android:id="@+id/tvStatusDetail" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="先加入相机的 Wi-Fi 网络" android:textSize="13sp" android:lineSpacingExtra="5dp" android:textColor="@color/nl_muted" android:layout_marginTop="10dp"/>
+                <ProgressBar android:id="@+id/progressBar" android:layout_width="28dp" android:layout_height="28dp" android:layout_marginTop="16dp" android:visibility="gone"/>
+                <Button android:id="@+id/btnConnect" android:layout_width="match_parent" android:layout_height="60dp" android:text="连接相机" android:textSize="15sp" android:layout_marginTop="20dp" android:visibility="gone"/>
+                <Button android:id="@+id/btnRetry" android:layout_width="match_parent" android:layout_height="56dp" android:text="重新连接" android:layout_marginTop="16dp" android:visibility="gone"/>
+                <Button android:id="@+id/btnOpenAlbum" android:layout_width="match_parent" android:layout_height="56dp" android:text="打开相机相册 →" android:layout_marginTop="16dp" android:visibility="gone"/>
+                <Button android:id="@+id/btnDisconnect" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent" android:layout_height="48dp" android:text="断开连接" android:textColor="@color/nl_muted" android:visibility="gone"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp" android:background="@drawable/nl_card" android:layout_marginTop="16dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="首次连接" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/nl_text"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="01   相机打开「连接至智能设备 → Wi-Fi 连接」\n02   手机 WLAN 加入相机显示的网络\n03   回到这里，点击连接相机" android:textSize="13sp" android:lineSpacingExtra="8dp" android:textColor="@color/nl_muted" android:layout_marginTop="12dp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:layout_marginTop="20dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="相机地址" android:textSize="12sp" android:textColor="@color/nl_muted" android:layout_marginEnd="16dp"/>
+                <EditText android:id="@+id/etCameraIp" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="192.168.1.1" android:textSize="14sp" android:textColor="@color/nl_text" android:background="@drawable/nl_field" android:paddingHorizontal="16dp" android:inputType="textUri" android:singleLine="true" android:selectAllOnFocus="true"/>
+            </LinearLayout>
+            <Button android:id="@+id/btnDiagnostics" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent" android:layout_height="48dp" android:text="查看连接诊断" android:textSize="12sp" android:textColor="@color/nl_muted"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

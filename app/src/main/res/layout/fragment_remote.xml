@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/nl_bg" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="48dp" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="监看 / 遥控" android:textSize="25sp" android:textStyle="bold" android:textColor="@color/nl_text"/>
+            <TextView android:id="@+id/tvLiveBadge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="STANDBY" android:textSize="10sp" android:letterSpacing="0.1" android:textColor="@color/nl_accent"/>
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="把画面交给相机，把控制留在手中。" android:textColor="@color/nl_muted" android:textSize="13sp" android:layout_marginTop="8dp" android:layout_marginBottom="24dp"/>
+        <FrameLayout android:layout_width="match_parent" android:layout_height="240dp" android:background="@drawable/nl_card">
+            <ImageView android:id="@+id/liveImage" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitCenter" android:contentDescription="相机实时取景画面"/>
+            <TextView android:id="@+id/tvPreviewHint" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:text="等待连接相机" android:textColor="@color/nl_muted" android:textSize="13sp"/>
+        </FrameLayout>
+        <TextView android:id="@+id/tvRemoteStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="64dp" android:gravity="center_vertical" android:text="请先连接相机" android:textColor="@color/nl_muted" android:textSize="13sp" android:lineSpacingExtra="5dp" android:paddingVertical="12dp"/>
+        <Button android:id="@+id/btnPreview" android:layout_width="match_parent" android:layout_height="56dp" android:text="开启实时取景"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="92dp" android:gravity="center_vertical" android:layout_marginTop="12dp">
+            <Button android:id="@+id/btnShutter" android:layout_width="68dp" android:layout_height="68dp" android:background="@drawable/nl_shutter" android:backgroundTint="@color/nl_accent" android:text="拍照" android:textSize="12sp" android:textColor="#161C0A" android:contentDescription="拍照"/>
+            <Button android:id="@+id/btnRecord" android:layout_width="0dp" android:layout_height="56dp" android:layout_weight="1" android:layout_marginStart="20dp" android:text="●  开始录制" android:textColor="#FFB4AB" android:backgroundTint="#382525"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:layout_marginTop="16dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="拍摄参数" android:textColor="@color/nl_text" android:textSize="16sp" android:textStyle="bold"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="48dp" android:gravity="center_vertical" android:text="自动同步" android:textColor="@color/nl_accent" android:textSize="12sp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/parameterButtons" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"/>
+        <TextView android:id="@+id/tvParameterHint" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="参数取决于机身当前曝光模式。" android:textColor="@color/nl_muted" android:textSize="12sp" android:paddingVertical="8dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="拍摄内容保存在相机存储卡。若机身不允许远程切换照片 / 视频模式，请在相机上切换后重试。" android:textSize="12sp" android:textColor="@color/nl_muted" android:lineSpacingExtra="5dp" android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</ScrollView>
