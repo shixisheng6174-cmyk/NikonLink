@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="5dp">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="150dp" android:background="@drawable/nl_card">
+        <ImageView android:id="@+id/thumbnail" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:contentDescription="相机文件缩略图"/>
+        <TextView android:id="@+id/fileIcon" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:text="JPG" android:textSize="24sp" android:letterSpacing="0.12" android:textColor="#54616B"/>
+        <TextView android:id="@+id/fileTypeBadge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="bottom|start" android:layout_margin="10dp" android:paddingHorizontal="8dp" android:paddingVertical="4dp" android:background="@drawable/nl_field" android:textSize="10sp" android:textColor="@color/nl_accent"/>
+        <CheckBox android:id="@+id/selectionCheckbox" android:layout_width="48dp" android:layout_height="48dp" android:layout_gravity="top|end" android:contentDescription="选择此文件" android:buttonTint="@color/nl_accent"/>
+    </FrameLayout>
+    <TextView android:id="@+id/fileName" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:textColor="@color/nl_text" android:textSize="12sp" android:singleLine="true" android:ellipsize="end"/>
+    <TextView android:id="@+id/fileSize" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginBottom="12dp" android:textColor="@color/nl_muted" android:textSize="11sp"/>
+</LinearLayout>

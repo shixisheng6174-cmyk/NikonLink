@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/nl_bg">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="72dp" android:gravity="center_vertical" android:paddingHorizontal="24dp">
+        <TextView android:id="@+id/tvPath" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="相机相册" android:textColor="@color/nl_text" android:textSize="25sp" android:textStyle="bold"/>
+        <Button android:id="@+id/btnBack" android:layout_width="wrap_content" android:layout_height="48dp" android:text="刷新" android:textSize="12sp"/>
+    </LinearLayout>
+    <TextView android:id="@+id/tvSummary" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="照片与视频，原样带走。" android:textColor="@color/nl_muted" android:textSize="13sp" android:paddingHorizontal="24dp" android:paddingBottom="16dp"/>
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="52dp" android:scrollbars="none" android:paddingHorizontal="20dp">
+        <RadioGroup android:id="@+id/filterGroup" android:layout_width="wrap_content" android:layout_height="48dp" android:orientation="horizontal" android:gravity="center_vertical">
+            <RadioButton android:id="@+id/filterAll" android:layout_width="wrap_content" android:layout_height="48dp" android:text="全部" android:textSize="13sp" android:checked="true"/>
+            <RadioButton android:id="@+id/filterPhoto" android:layout_width="wrap_content" android:layout_height="48dp" android:text="照片" android:textSize="13sp" android:layout_marginStart="12dp"/>
+            <RadioButton android:id="@+id/filterRaw" android:layout_width="wrap_content" android:layout_height="48dp" android:text="RAW" android:textSize="13sp" android:layout_marginStart="12dp"/>
+            <RadioButton android:id="@+id/filterVideo" android:layout_width="wrap_content" android:layout_height="48dp" android:text="视频" android:textSize="13sp" android:layout_marginStart="12dp"/>
+        </RadioGroup>
+    </HorizontalScrollView>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="52dp" android:gravity="center_vertical" android:paddingHorizontal="20dp">
+        <EditText android:id="@+id/searchFilename" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:hint="搜索文件名，如 DSC_9401" android:textColor="@color/nl_text" android:textColorHint="@color/nl_muted" android:textSize="13sp" android:singleLine="true" android:inputType="text" android:imeOptions="actionSearch"/>
+        <Button android:id="@+id/btnFilters" android:layout_width="wrap_content" android:layout_height="48dp" android:layout_marginStart="8dp" android:text="筛选 / 排序" android:textSize="12sp"/>
+    </LinearLayout>
+    <TextView android:id="@+id/tvFilters" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="24dp" android:paddingVertical="6dp" android:textColor="@color/nl_accent" android:textSize="12sp" android:visibility="gone"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerView" android:layout_width="match_parent" android:layout_height="match_parent" android:clipToPadding="false" android:padding="16dp"/>
+        <TextView android:id="@+id/tvEmpty" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:padding="32dp" android:textColor="@color/nl_muted" android:textSize="14sp" android:lineSpacingExtra="8dp" android:visibility="gone"/>
+        <TextView android:id="@+id/tvLoadStatus" android:layout_width="match_parent" android:layout_height="48dp" android:layout_gravity="bottom" android:gravity="center" android:background="@color/nl_surface" android:textColor="@color/nl_muted" android:textSize="12sp" android:visibility="gone"/>
+    </FrameLayout>
+    <TextView android:id="@+id/tvTransferProgress" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp" android:textColor="@color/nl_accent" android:textSize="12sp" android:visibility="gone"/>
+    <LinearLayout android:id="@+id/selectionBar" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:paddingHorizontal="20dp" android:paddingVertical="8dp" android:background="@color/nl_surface" android:orientation="vertical" android:visibility="gone">
+        <TextView android:id="@+id/tvSelectedCount" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/nl_text" android:textSize="13sp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:gravity="center_vertical">
+            <Button android:id="@+id/btnSelectAll" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="全选"/>
+            <Button android:id="@+id/btnTransfer" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="2" android:text="保存到手机" android:layout_marginStart="12dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
