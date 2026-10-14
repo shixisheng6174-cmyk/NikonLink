@@ -1,0 +1,8 @@
+<resources>
+    <color name="nl_bg">#101214</color>
+    <color name="nl_surface">#1C2024</color>
+    <color name="nl_border">#30363C</color>
+    <color name="nl_text">#F1F3F5</color>
+    <color name="nl_muted">#9AA5AE</color>
+    <color name="nl_accent">#E4F078</color>
+</resources>
