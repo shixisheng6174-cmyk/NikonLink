@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_cameras"
+        android:title="相机"
+        android:icon="@android:drawable/ic_menu_camera" />
+    <item
+        android:id="@+id/navigation_browser"
+        android:title="相册"
+        android:icon="@android:drawable/ic_menu_gallery" />
+    <item
+        android:id="@+id/navigation_remote"
+        android:title="监看 / 遥控"
+        android:icon="@android:drawable/ic_menu_slideshow" />
+</menu>
